@@ -4,22 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:ignore="MissingConstraints"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
         android:padding="16dp"
-        android:gravity="center_horizontal"/>
+        android:text="TextView"
+        tools:ignore="MissingConstraints" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView"/>
+    <EditText
+        android:id="@+id/inputStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_text"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/starting_number"
+        android:inputType="number"
+        android:padding="@dimen/small_margin"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/inputEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/ending_number"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/checkPrimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputEnd"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/button_margin"
+        android:layout_marginTop="@dimen/button_margin"
+        android:layout_marginEnd="@dimen/button_margin"
+        android:layout_marginBottom="@dimen/button_margin"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="CheckPrimeNumbers"
+        android:padding="16dp"
+        android:text="Check Prime Numbers"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
 
 </RelativeLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PrimeChecker</string>
+    <string name="starting_number">Starting number</string>
+    <string name="ending_number">Ending number</string>
 </resources>
